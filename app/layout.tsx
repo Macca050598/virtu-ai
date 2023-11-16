@@ -5,7 +5,7 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { ModalProvider } from '@/components/modal-provider'
 import { ToasterProvider } from '@/components/toaster-provider'
 import { CrispProvider } from '@/components/crisp-provider'
-
+import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <CrispProvider />
       <body className={inter.className}>
-        
+        <Analytics />
         <ModalProvider />
         <ToasterProvider />
         {children}</body>

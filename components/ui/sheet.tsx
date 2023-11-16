@@ -15,10 +15,15 @@ const SheetClose = SheetPrimitive.Close
 
 
 
-const SheetPortal = ({ className, ...props }: any) => (
-  <Sheet className={className} {...props} />
+interface SheetPortalProps extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Portal> {
+  // You can define additional custom props here if needed
+}
+
+const SheetPortal: React.FC<SheetPortalProps> = ({ children, ...props }) => (
+  <SheetPrimitive.Portal {...props}>
+      {children}
+  </SheetPrimitive.Portal>
 );
-SheetPortal.displayName = SheetPrimitive.Portal.displayName
 
 const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
