@@ -31,7 +31,7 @@ export const LandingNavbar = () => {
         </button>
       </div>
 
-      <div className={`fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 z-50 transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:-translate-x-full md:static md:bg-transparent md:flex md:items-center md:justify-end`}>
+      <div className={`fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 z-50 transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:static md:bg-transparent md:flex md:items-center md:justify-end`}>
         <button onClick={() => setIsMenuOpen(false)} className="absolute top-4 right-4 text-white md:hidden">
           {/* Close Icon */}
           <div className="w-6 h-6 relative">
@@ -41,7 +41,7 @@ export const LandingNavbar = () => {
         </button>
 
         <div className="flex items-center gap-x-2 mt-16 md:mt-0">
-                <Link href="/#about" passHref>
+        <Link href="/#about" passHref>
                     <Button variant="ghost" className="text-white hover:text-black transition duration-300">
                         About
                     </Button>
@@ -56,7 +56,7 @@ export const LandingNavbar = () => {
                         Testimonials
                     </Button>
                 </Link>
-                </div>
+             
                
           {/* ... rest of your links here */}
           <Link href={isSignedIn ? '/dashboard' : '/sign-up'}>
@@ -64,7 +64,7 @@ export const LandingNavbar = () => {
               Get Started
             </Button>
           </Link>
-        
+        </div>
       </div>
     </nav>
   );
