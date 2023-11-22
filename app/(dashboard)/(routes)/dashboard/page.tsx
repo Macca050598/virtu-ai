@@ -102,7 +102,7 @@ return (
             {tools.map((tool, index) => (
                 index % 2 === 0 && (
                     // eslint-disable-next-line react/jsx-key
-                    <div className="flex space-x-4">
+                    <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                         <Card
                             onClick={() => router.push(tool.href)}
                             key={tool.href}

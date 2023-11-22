@@ -26,7 +26,7 @@ import toast from 'react-hot-toast';
 import TypewriterComponent from 'typewriter-effect';
 import Image from 'next/image';
 
-const EmailMarketing = () => {
+export const EmailMarketing = () => {
    
     const proModal = useProModal();
     const [messages, setMessages] = useState<ChatCompletionMessageParam[]>([]);

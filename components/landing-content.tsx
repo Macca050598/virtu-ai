@@ -146,8 +146,8 @@ export const LandingContent = () => {
                         <Image 
                         src='/Dashboard.png'
                         alt='Product Preview'
-                        width={1363}
-                        height={866} 
+                        width={1700}
+                        height={950} 
                         quality={100}
                         className="rounded-md p-2 sm:p-8 md:p-8 shadow-2xl ring-1 ring-gray-900/10"
                         />
