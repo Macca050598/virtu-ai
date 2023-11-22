@@ -39,8 +39,7 @@ export async function POST(
         const isPro = await checkSubscription();
 
         if (!freeTrial && !isPro) {
-            return new NextResponse(null, { status: 403, statusText: "Free trial has expired." });
-
+            return new NextResponse("Free trial has expired.",  {status: 403})
         }
 
         const response = await deepai.callStandardApi('torch-srgan', {
