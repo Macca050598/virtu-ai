@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,14 +10,12 @@ export const LandingNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="p-4 bg-transparent flex items-center justify-between">
-      <Link href="/">
-        <div className="flex items-center cursor-pointer">
-          <div className="relative h-8 w-8 mr-4">
-            <Image fill alt="Logo" src="/virtuAiLogo.png" />
-          </div>
-          <h1 className="text-2xl font-bold text-white">VirtuAi</h1>
+    <nav className="flex items-center justify-between p-4 bg-transparent">
+      <Link href="/" className="flex items-center">
+        <div className="relative h-8 w-8 mr-4">
+          <Image fill alt="Logo" src="/virtuAiLogo.png" />
         </div>
+        <h1 className="text-2xl font-bold text-white">VirtuAi</h1>
       </Link>
 
       <div className="md:hidden">
@@ -31,7 +29,7 @@ export const LandingNavbar = () => {
         </button>
       </div>
 
-      <div className={`fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 z-50 transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:-translate-x-full md:static md:bg-transparent md:flex md:items-center md:justify-end`}>
+      <div className={`fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-75 z-50 transform transition-transform duration-300 ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:static md:bg-transparent md:flex md:items-center md:justify-end`}>
         <button onClick={() => setIsMenuOpen(false)} className="absolute top-4 right-4 text-white md:hidden">
           {/* Close Icon */}
           <div className="w-6 h-6 relative">
@@ -40,31 +38,29 @@ export const LandingNavbar = () => {
           </div>
         </button>
 
-        <div className="flex items-center gap-x-2 mt-16 md:mt-0">
-                <Link href="/#about" passHref>
-                    <Button variant="ghost" className="text-white hover:text-black transition duration-300">
-                        About
-                    </Button>
-                </Link>
-                <Link href="/#price" passHref>
-                    <Button variant="ghost" className="text-white hover:text-black transition duration-300">
-                        Price
-                    </Button>
-                </Link>
-                <Link href="/#testimonials" passHref>
-                    <Button variant="ghost" className="text-white hover:text-black transition duration-300">
-                        Testimonials
-                    </Button>
-                </Link>
-                </div>
-               
-          {/* ... rest of your links here */}
-          <Link href={isSignedIn ? '/dashboard' : '/sign-up'}>
-            <Button variant="premium" className="rounded-full transition duration-300">
-              Get Started
+        <div className="flex flex-col md:flex-row items-center gap-4 mt-4 md:mt-0 md:gap-6 md:pl-4">
+          <Link href="/#about" passHref>
+            <Button variant="ghost" className="text-white hover:text-black transition duration-300">
+              About
             </Button>
           </Link>
-        
+          <Link href="/#price" passHref>
+            <Button variant="ghost" className="text-white hover:text-black transition duration-300">
+              Price
+            </Button>
+          </Link>
+          <Link href="/#testimonials" passHref>
+            <Button variant="ghost" className="text-white hover:text-black transition duration-300">
+              Testimonials
+            </Button>
+          </Link>
+        </div>
+
+        <Link href={isSignedIn ? '/dashboard' : '/sign-up'}>
+          <Button variant="premium" className="rounded-full transition duration-300">
+            Get Started
+          </Button>
+        </Link>
       </div>
     </nav>
   );
