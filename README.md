@@ -1,16 +1,4 @@
 <div align="center"> <img src="logo.png" alt="AI Dashboard Logo" width="200" /> <h1>AI Dashboard 🚀</h1> <p>Your all-in-one hub for AI-powered tools, built with Next.js and Clerk.</p> <p> <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" /> <img src="https://img.shields.io/badge/Clerk-000000?style=for-the-badge&logo=clerk&logoColor=white" alt="Clerk" /> <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" /> <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License" /> </p> </div>
-Table of Contents
-Features
-
-How It Works
-
-Tech Stack
-
-Installation
-
-Screenshots
-
-License
 
 Features 🚀
 🤖 AI-Powered Tools
